@@ -72,6 +72,16 @@ files:
         }
     }
   learner_created: false
+- name: src/contacts/ContactsApp.java
+  visible: true
+  learner_created: true
+- name: src/contacts/Contact.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/43/stages/228/implement
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/43/stages/228/implement">JetBrains
+    Academy</a>
+  time: Mon, 09 Nov 2020 17:30:00 UTC
 record: -1

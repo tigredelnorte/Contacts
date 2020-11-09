@@ -2,6 +2,7 @@ package contacts;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        ContactsApp app = new ContactsApp();
+        app.run();
     }
 }
