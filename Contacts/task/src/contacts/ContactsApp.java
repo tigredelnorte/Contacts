@@ -1,25 +1,35 @@
 package contacts;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.awt.*;
 
 public class ContactsApp {
-    List<Contact> contacts = new ArrayList<>();
     public void run() {
-        contacts.add(addContact());
-        System.out.println("A record created!");
-        System.out.println("A Phone Book with a single record created!");
-    }
-
-    private Contact addContact() {
-        System.out.println("Enter the name of the person: ");
-        Scanner sc = new Scanner(System.in);
-        String name = sc.nextLine();
-        System.out.println("Enter the surname of the person: ");
-        String surname = sc.nextLine();
-        System.out.println("Enter the number: ");
-        String number = sc.nextLine();
-        return new Contact(name, surname, number);
+        ContactsList contactsList = new ContactsList();
+        boolean exit = false;
+        while(!exit) {
+            System.out.print("Enter action (add, remove, edit, count, list, exit): ");
+            switch (Main.getInput().toUpperCase()) {
+                case "ADD":
+                    contactsList.addContact();
+                    break;
+                case "REMOVE":
+                    contactsList.removeContact();
+                    break;
+                case "EDIT":
+                    contactsList.editContact();
+                    break;
+                case "COUNT":
+                    contactsList.countContacts();
+                    break;
+                case "LIST":
+                    contactsList.listContacts();
+                    break;
+                case "EXIT":
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Incorrect action. Please try again");
+            }
+        }
     }
 }
